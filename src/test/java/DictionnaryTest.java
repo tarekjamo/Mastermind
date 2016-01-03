@@ -18,7 +18,7 @@ public class DictionnaryTest {
 
     }
     @Test
-    public void eight_colors_and_four_slots_should_generate_1296_possibilities()
+    public void eight_colors_and_four_slots_should_generate_4096_possibilities()
     {
         Dictionary d = new Dictionary(4,8) ;
         int answer = (int) Math.pow(8,4) ; // 4096
