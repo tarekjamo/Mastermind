@@ -139,9 +139,13 @@ public class Dictionary {
 
         for(int i = 0 ; i < code.length ; i++)
         {
-            code[i] =  (int)(Math.random() * ((colors.size()) )) ;
+            code[i] = randomColor();
         }
         return code ;
+    }
+
+    public int randomColor() {
+        return (int)(Math.random() * ((colors.size()) ));
     }
 
     public  int[] firstGuess() {

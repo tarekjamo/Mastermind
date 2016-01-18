@@ -1,4 +1,6 @@
 import static org.fest.assertions.api.Assertions.assertThat;
+
+
 import org.junit.Test;
 
 /**
@@ -11,7 +13,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,4} ;
         int[] suggested = {5,6,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(0) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -22,7 +24,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,4} ;
         int[] suggested = {1,6,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -33,7 +35,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,4} ;
         int[] suggested = {5,1,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(0) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(1) ;
@@ -44,7 +46,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,3,4} ;
         int[] suggested = {5,1,1,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(1) ;
@@ -56,7 +58,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,3,4} ;
         int[] suggested = {5,6,1,1} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(0) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(2) ;
@@ -67,7 +69,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,6} ;
         int[] suggested = {5,6,6,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(0) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(1) ;
@@ -78,7 +80,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,3,4} ;
         int[] suggested = {5,6,1,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(0) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(1) ;
@@ -89,7 +91,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,3,4} ;
         int[] suggested = {5,1,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -99,7 +101,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,4} ;
         int[] suggested = {1,1,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -109,7 +111,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,3,4} ;
         int[] suggested = {1,6,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -120,7 +122,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,1,1,4} ;
         int[] suggested = {1,6,7,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(0) ;
@@ -131,7 +133,7 @@ public class CorrectorTest {
     {
         int[] solution = {2,3,1,1} ;
         int[] suggested = {1,1,1,8} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(1) ;
@@ -142,7 +144,7 @@ public class CorrectorTest {
     {
         int[] solution = {1,2,3,4} ;
         int[] suggested = {2,3,1,4} ;
-        Evaluation evaluation = Evaluator.evaluate(suggested,solution) ;
+        Evaluation evaluation = Evaluator.evaluate(suggested, solution) ;
 
         assertThat(evaluation.getCorrectColorInCorrectPosition()).isEqualTo(1) ;
         assertThat(evaluation.getCorrectColorInWrongPosition()).isEqualTo(3) ;

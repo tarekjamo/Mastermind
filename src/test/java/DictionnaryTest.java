@@ -1,6 +1,5 @@
-import org.junit.Test;
 
-import java.util.Set;
+import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 

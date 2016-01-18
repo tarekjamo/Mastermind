@@ -1,3 +1,8 @@
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+
 /**
  * Created by tarekray on 01/01/16.
  */
@@ -6,13 +11,19 @@ public class Mastermind {
     public Guess[] guesses ;
     int guessCount = 0 ;
     public Dictionary dictionary ;
-
+    boolean solved = false ;
     public Mastermind()
     {
-        guesses = new Guess[12] ;
+        this(20) ;
+    }
+
+    public Mastermind(int size)
+    {
+        guesses = new Guess[size] ;
         dictionary = new Dictionary(4,6) ;
         code = dictionary.generateRandomCode() ;
     }
+
 
     public boolean solve() {
 

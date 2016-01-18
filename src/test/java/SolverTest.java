@@ -1,3 +1,4 @@
+
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -7,8 +8,20 @@ import static org.fest.assertions.api.Assertions.assertThat;
  */
 public class SolverTest {
 
+
     @Test
-    public void test() {
+    public void test_genetic_algorithm() {
+         GeneticAlgorithmMastermind m = new GeneticAlgorithmMastermind();
+            System.out.println("The code : ") ;
+
+            ArrayHelper.print(m.code);
+            System.out.println() ;
+            assertThat(m.geneticAlgorithmSolve()).isEqualTo(true);
+    }
+
+
+    @Test
+    public void test_knuth_algorithm() {
         for(int i = 0 ; i < 10 ; i++) {
         Mastermind m = new Mastermind();
         System.out.println("The code : ") ;
@@ -25,6 +38,7 @@ public class SolverTest {
         for(int i = 0 ; i < 30 ; i++) {
             Mastermind m = new Mastermind();
             ArrayHelper.print(m.code);
+            System.out.println(m.code);
             assertThat(isValidCode(m)).isEqualTo(true);
         }
     }

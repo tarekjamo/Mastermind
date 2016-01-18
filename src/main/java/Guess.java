@@ -1,7 +1,9 @@
+import java.util.Comparator;
+
 /**
  * Created by tarekray on 01/01/16.
  */
-public class Guess {
+public class Guess implements Comparable<Guess>{
     public int[] combination ;
     public Evaluation evaluation ;
 
@@ -26,5 +28,11 @@ public class Guess {
         System.out.println("white "+evaluation.getCorrectColorInWrongPosition()) ;
         System.out.println("-----------------------------------") ;
 
+    }
+
+    @Override
+    public int compareTo(Guess o) {
+        EvaluationComparator ec = new EvaluationComparator();
+        return ec.compare(this,o) ;
     }
 }
