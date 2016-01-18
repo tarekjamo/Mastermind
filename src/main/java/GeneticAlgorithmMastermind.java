@@ -69,13 +69,10 @@ public class GeneticAlgorithmMastermind extends  Mastermind {
     }
 
     private int[] crossover(HashMap<Integer,Guess> fittest) {
-        int[] guess1 = fittest.get(0).combination ;
-        int[] guess2 = fittest.get(1).combination ;
-        int[] guess3 = fittest.get(2).combination ;
 
-        int[] crossover = new int[guess1.length] ;
+        int[] crossover = new int[fittest.get(0).combination.length] ;
 
-        for(int i = 0 ; i < guess1.length ; i++)
+        for(int i = 0 ; i < fittest.get(0).combination.length ; i++)
         {
             int random = (int)(Math.random() * ((fittest.size()) )) ;
             crossover[i] = fittest.get(random).combination[i] ;
@@ -84,6 +81,11 @@ public class GeneticAlgorithmMastermind extends  Mastermind {
     }
 
     private HashMap<Integer,Guess> fittest() {
+       return fittest(3) ;
+    }
+
+
+    private HashMap<Integer,Guess> fittest(int size) {
 
         Guess[] top = new Guess[guessCount] ;
         for(int j = 0 ; j < guessCount ; j++)
@@ -94,13 +96,13 @@ public class GeneticAlgorithmMastermind extends  Mastermind {
         Arrays.sort(top);
 
         HashMap<Integer,Guess> fittest = new HashMap<Integer,Guess>() ;
-        fittest.put(0, top[top.length-1]) ;
-        fittest.put(1, top[top.length-2]) ;
-        fittest.put(2, top[top.length-3]) ;
-
+      for(int  i = 0 ; i < size ; i ++) {
+          fittest.put(i, top[top.length - 1 -i]);
+      }
         return fittest ;
 
     }
+
 
     private boolean finishGeneticEvolution(Evaluation evaluation) {
         if (evaluation.getCorrectColorInCorrectPosition() == 4) {
